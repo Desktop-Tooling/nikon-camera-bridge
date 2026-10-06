@@ -1,4 +1,4 @@
-﻿# Changelog
+# Changelog
 
 ## [Unreleased]
 
@@ -7,6 +7,7 @@
 - **Site crawlability:** `apps/site` writes `/robots.txt` and `/sitemap.xml` from the shared prerender route list (`/` and `/about`) with absolute `https://desktop-tooling.github.io/nikon-camera-bridge/` URLs.
 
 ### Changed
+- **Desktop packaging:** Switched the Windows Store target from unsupported `msix` (electron-builder 25 schema) to `appx` with the same Store identity/publisher settings so packaging validates and CI can produce Store-capable artifacts again.
 
 - **Diagram checks and runtime:** Kept Windows-rendered Mermaid geometry canonical while Linux CI verifies platform-neutral source hashes, source renderability, and the committed output families; explicitly installed the pinned Puppeteer browser with a GitHub Actions-only sandbox configuration; and moved sanitized SVG enhancement to the client entry so it survives client navigation and reconnects.
 - **Architecture diagrams:** Replaced all eight inline Mermaid blocks in the root and package READMEs with accessible standalone-adaptive SVGs backed by editable Mermaid sources, version 1 theme manifests, host-runtime siblings, fixed light variants, and reproducible freshness checks using `@dev-centr/themed-svg` 0.1.1 and `@dev-centr/mermaid-svg-css-vars` 0.1.2. Added adaptive Antora delivery and sanitized progressive enhancement for the SolidStart architecture diagram.
