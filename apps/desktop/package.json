@@ -65,9 +65,9 @@
     "flatpak": {
       "runtime": "org.freedesktop.Platform",
       "sdk": "org.freedesktop.Sdk",
-      "runtimeVersion": "25.08",
+      "runtimeVersion": "24.08",
       "base": "org.electronjs.Electron2.BaseApp",
-      "baseVersion": "25.08",
+      "baseVersion": "24.08",
       "finishArgs": [
         "--socket=wayland",
         "--socket=x11",
@@ -97,6 +97,8 @@
       "languages": [
         "en-US"
       ]
-    }
+    },
+    "icon": "build/icon.png",
+    "executableName": "WebcamBridgeforNikon"
   }
 }

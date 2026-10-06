@@ -7,6 +7,7 @@
 - **Site crawlability:** `apps/site` writes `/robots.txt` and `/sitemap.xml` from the shared prerender route list (`/` and `/about`) with absolute `https://desktop-tooling.github.io/nikon-camera-bridge/` URLs.
 
 ### Changed
+- **Desktop packaging:** Added a build icon and `executableName` so WiX MSI linking no longer fails looking for `WebcamBridgeforNikonIcon.exe`; pointed Flatpak at Freedesktop/Electron `24.08` runtimes and install them on the Linux CI runner before packaging.
 - **Desktop packaging:** Switched the Windows Store target from unsupported `msix` (electron-builder 25 schema) to `appx` with the same Store identity/publisher settings so packaging validates and CI can produce Store-capable artifacts again.
 
 - **Diagram checks and runtime:** Kept Windows-rendered Mermaid geometry canonical while Linux CI verifies platform-neutral source hashes, source renderability, and the committed output families; explicitly installed the pinned Puppeteer browser with a GitHub Actions-only sandbox configuration; and moved sanitized SVG enhancement to the client entry so it survives client navigation and reconnects.
